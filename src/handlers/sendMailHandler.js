@@ -20,7 +20,7 @@ const sendMail = async (req, res) => {
 
     const subject = "New Contact Info";
     const admMail = process.env.ADMIN_EMAIL;
-    const mailMsg = `${name}\n${email}\n${msg}`;
+    const mailMsg = `<h3>${name}</h3><br> <h3>${email}</h3><br> <p>${msg}</p>`;
 
     await mailer(admMail, subject, mailMsg);
 
