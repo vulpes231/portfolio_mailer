@@ -6,7 +6,7 @@ const autoResponse = async (email) => {
 
     I will personally review your message and get back to you as soon as possible. In the meantime, feel free to explore VulpesCode website for more information about my services and projects.
     
-    If you have any further questions or need immediate assistance, you can reach me directly at +2347043978929.
+    If you have any further questions or need immediate assistance, you can reach me directly at ${process.env.ADMIN_PHONE}.
     
     Thank you once again for reaching out to VulpesCode.`;
 

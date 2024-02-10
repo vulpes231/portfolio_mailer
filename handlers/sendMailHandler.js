@@ -19,7 +19,7 @@ const sendMail = async (req, res) => {
     await Mail.create(newMailInfo);
 
     const subject = "New Contact Info";
-    const admMail = "olayinka4962@gmail.com";
+    const admMail = process.env.ADMIN_EMAIL;
     const mailMsg = `${name}\n${email}\n${msg}`;
 
     await mailer(admMail, subject, mailMsg);
