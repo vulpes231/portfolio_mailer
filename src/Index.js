@@ -2,9 +2,9 @@ const express = require("express");
 require("dotenv").config();
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
-const { corsOptions } = require("./src/configs/corsOptions");
-const { requestLogger, errorLogger } = require("./src/middlewares/logger");
-const { connectDB } = require("./src/configs/connectDB");
+const { corsOptions } = require("./configs/corsOptions");
+const { requestLogger, errorLogger } = require("./middlewares/logger");
+const { connectDB } = require("./configs/connectDB");
 const { default: mongoose } = require("mongoose");
 
 const app = express();
@@ -21,8 +21,8 @@ app.use(cookieParser());
 
 app.use(cors(corsOptions));
 
-app.use("/send", require("./src/routes/sendmail"));
-app.use("/", require("./src/routes/root"));
+app.use("/send", require("./routes/sendmail"));
+app.use("/", require("./routes/root"));
 
 app.use(errorLogger);
 
