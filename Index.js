@@ -13,7 +13,6 @@ const PORT = process.env.PORT || 3000;
 connectDB();
 
 app.use(requestLogger);
-// console.log("Used the logger");
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
