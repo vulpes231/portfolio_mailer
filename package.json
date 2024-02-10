@@ -4,6 +4,10 @@
   "devDependencies": {
     "bun-types": "latest"
   },
+  "scripts": {
+    "dev": "nodemon index",
+    "start": "node index"
+  },
   "dependencies": {
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
